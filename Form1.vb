@@ -245,4 +245,20 @@ Public Class Form1
     Private Sub Buttonslash_Click(sender As Object, e As EventArgs) Handles Buttonslash.Click
         Shell("""Tools\adb.exe"" shell input text '/'")
     End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Shell("""Tools\adb.exe"" shell su -c " & """rm /data/system/*.key""")
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Shell("""Tools\adb.exe"" reboot")
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Shell("""Tools\adb.exe"" reboot recovery")
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Shell("""Tools\adb.exe"" shell su -c " & """poweroff""")
+    End Sub
 End Class

@@ -83,6 +83,10 @@ Partial Class Form1
         Me.Home = New System.Windows.Forms.Button()
         Me.Apps = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -536,7 +540,7 @@ Partial Class Form1
         '
         'adb
         '
-        Me.adb.Location = New System.Drawing.Point(45, 272)
+        Me.adb.Location = New System.Drawing.Point(695, 264)
         Me.adb.Name = "adb"
         Me.adb.Size = New System.Drawing.Size(171, 39)
         Me.adb.TabIndex = 55
@@ -545,7 +549,7 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(357, 272)
+        Me.Button10.Location = New System.Drawing.Point(695, 174)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(171, 39)
         Me.Button10.TabIndex = 56
@@ -622,17 +626,57 @@ Partial Class Form1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "768x1280", "720x1200", "480x800", "540x960"})
-        Me.ComboBox1.Location = New System.Drawing.Point(222, 282)
+        Me.ComboBox1.Location = New System.Drawing.Point(697, 147)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 61
         Me.ComboBox1.Text = "Choose your screen resolution"
         '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(695, 219)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(171, 39)
+        Me.Button11.TabIndex = 62
+        Me.Button11.Text = "Disable pattern lock (reboot needed)"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(255, 272)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(93, 39)
+        Me.Button12.TabIndex = 63
+        Me.Button12.Text = "Power off"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(150, 272)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(99, 39)
+        Me.Button13.TabIndex = 64
+        Me.Button13.Text = "Recovery"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(45, 272)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(99, 39)
+        Me.Button14.TabIndex = 65
+        Me.Button14.Text = "Reboot"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(924, 327)
+        Me.ClientSize = New System.Drawing.Size(924, 329)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -759,5 +803,9 @@ End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Button11 As System.Windows.Forms.Button
+    Friend WithEvents Button12 As System.Windows.Forms.Button
+    Friend WithEvents Button13 As System.Windows.Forms.Button
+    Friend WithEvents Button14 As System.Windows.Forms.Button
 
 End Class
