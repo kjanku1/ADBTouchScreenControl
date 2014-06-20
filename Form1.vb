@@ -23,6 +23,37 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        If ComboBox1.Text = "Choose your screen resolution" Then
+            MsgBox("Choose you're devices resolution")
+        Else
+            If ComboBox1.Text = "1440x2560" Then
+                Shell("""Tools\adb.exe"" shell input swipe 562 1800 1440 1800")
+            Else
+
+                If ComboBox1.Text = "1080x1920" Then
+                    Shell("""Tools\adb.exe"" shell input swipe 722 1818 1340 1818")
+                Else
+                    If ComboBox1.Text = "768x1280" Then
+                        Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
+                    Else
+                        If ComboBox1.Text = "720x1200" Then
+                            Shell("""Tools\adb.exe"" shell input swipe 360 850 660 850")
+                        Else
+                            If ComboBox1.Text = "540x960" Then
+                                Shell("""Tools\adb.exe"" shell input swipe 270 680 509 676")
+                                Else
+                                If ComboBox1.Text = "480x800" Then
+                                    Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
         If e.KeyCode = Keys.Enter Then
             Shell("""Tools\adb.exe"" shell input text '" & TextBox1.Text & "'")
@@ -205,10 +236,6 @@ Public Class Form1
 
     Private Sub adb_Click(sender As Object, e As EventArgs) Handles adb.Click
         Shell("cmd.exe /k cd Tools && color 02 && title adb path")
-    End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
     End Sub
 
     Private Sub Buttoncaps_Click(sender As Object, e As EventArgs) Handles Buttoncaps.Click

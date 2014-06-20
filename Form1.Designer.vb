@@ -82,6 +82,7 @@ Partial Class Form1
         Me.GoBack = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
         Me.Apps = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -544,7 +545,7 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(222, 272)
+        Me.Button10.Location = New System.Drawing.Point(357, 272)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(171, 39)
         Me.Button10.TabIndex = 56
@@ -617,11 +618,22 @@ Partial Class Form1
         Me.Apps.TabIndex = 50
         Me.Apps.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "768x1280", "720x1200", "480x800", "540x960"})
+        Me.ComboBox1.Location = New System.Drawing.Point(222, 282)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 61
+        Me.ComboBox1.Text = "Choose your screen resolution"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 327)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -746,5 +758,6 @@ End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 
 End Class
