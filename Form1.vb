@@ -241,4 +241,8 @@ Public Class Form1
     Private Sub Buttoncaps_Click(sender As Object, e As EventArgs) Handles Buttoncaps.Click
         Shell("""Tools\adb.exe"" shell input keyevent KEYCODE_CAPS_LOCK")
     End Sub
+
+    Private Sub Buttonslash_Click(sender As Object, e As EventArgs) Handles Buttonslash.Click
+        Shell("""Tools\adb.exe"" shell input text '/'")
+    End Sub
 End Class

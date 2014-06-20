@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub buttonbackslash_Click(sender As Object, e As EventArgs) Handles buttonbackslash.Click
-        Shell("""Tools\adb.exe"" shell input text '/'")
+        Shell("""Tools\adb.exe"" shell input text '\'")
     End Sub
 
     Private Sub buttonminus_Click(sender As Object, e As EventArgs) Handles buttonminus.Click
@@ -46,7 +46,7 @@
     End Sub
 
     Private Sub buttoncudzy_Click(sender As Object, e As EventArgs) Handles buttoncudzy.Click
-        Shell("""Tools\adb.exe"" shell input text '/""'")
+        Shell("""Tools\adb.exe"" shell input text '\""'")
     End Sub
 
     Private Sub buttonapos_Click(sender As Object, e As EventArgs) Handles buttonapos.Click
