@@ -79,14 +79,16 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.GoBack = New System.Windows.Forms.Button()
-        Me.Home = New System.Windows.Forms.Button()
-        Me.Apps = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.GoBack = New System.Windows.Forms.Button()
+        Me.Home = New System.Windows.Forms.Button()
+        Me.Apps = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -549,11 +551,11 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(695, 174)
+        Me.Button10.Location = New System.Drawing.Point(782, 174)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(171, 39)
+        Me.Button10.Size = New System.Drawing.Size(83, 39)
         Me.Button10.TabIndex = 56
-        Me.Button10.Text = "Swipe to unlock"
+        Me.Button10.Text = "Swipe to unlock ( --> )"
         Me.Button10.UseVisualStyleBackColor = True
         '
         'TextBox1
@@ -595,37 +597,10 @@ Partial Class Form1
         Me.Label3.TabIndex = 60
         Me.Label3.Text = " and press enter to confirm"
         '
-        'GoBack
-        '
-        Me.GoBack.Image = CType(resources.GetObject("GoBack.Image"), System.Drawing.Image)
-        Me.GoBack.Location = New System.Drawing.Point(45, 227)
-        Me.GoBack.Name = "GoBack"
-        Me.GoBack.Size = New System.Drawing.Size(51, 39)
-        Me.GoBack.TabIndex = 52
-        Me.GoBack.UseVisualStyleBackColor = True
-        '
-        'Home
-        '
-        Me.Home.Image = CType(resources.GetObject("Home.Image"), System.Drawing.Image)
-        Me.Home.Location = New System.Drawing.Point(102, 227)
-        Me.Home.Name = "Home"
-        Me.Home.Size = New System.Drawing.Size(55, 39)
-        Me.Home.TabIndex = 51
-        Me.Home.UseVisualStyleBackColor = True
-        '
-        'Apps
-        '
-        Me.Apps.Image = CType(resources.GetObject("Apps.Image"), System.Drawing.Image)
-        Me.Apps.Location = New System.Drawing.Point(163, 227)
-        Me.Apps.Name = "Apps"
-        Me.Apps.Size = New System.Drawing.Size(53, 39)
-        Me.Apps.TabIndex = 50
-        Me.Apps.UseVisualStyleBackColor = True
-        '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "768x1280", "720x1200", "480x800", "540x960"})
+        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "768x1280", "720x1280", "720x1200", "480x800", "540x960", "240x320"})
         Me.ComboBox1.Location = New System.Drawing.Point(697, 147)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -668,11 +643,58 @@ Partial Class Form1
         Me.Button14.Text = "Reboot"
         Me.Button14.UseVisualStyleBackColor = True
         '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(376, 272)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(128, 39)
+        Me.Button15.TabIndex = 66
+        Me.Button15.Text = "Gestures"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'GoBack
+        '
+        Me.GoBack.Image = CType(resources.GetObject("GoBack.Image"), System.Drawing.Image)
+        Me.GoBack.Location = New System.Drawing.Point(45, 227)
+        Me.GoBack.Name = "GoBack"
+        Me.GoBack.Size = New System.Drawing.Size(51, 39)
+        Me.GoBack.TabIndex = 52
+        Me.GoBack.UseVisualStyleBackColor = True
+        '
+        'Home
+        '
+        Me.Home.Image = CType(resources.GetObject("Home.Image"), System.Drawing.Image)
+        Me.Home.Location = New System.Drawing.Point(102, 227)
+        Me.Home.Name = "Home"
+        Me.Home.Size = New System.Drawing.Size(55, 39)
+        Me.Home.TabIndex = 51
+        Me.Home.UseVisualStyleBackColor = True
+        '
+        'Apps
+        '
+        Me.Apps.Image = CType(resources.GetObject("Apps.Image"), System.Drawing.Image)
+        Me.Apps.Location = New System.Drawing.Point(163, 227)
+        Me.Apps.Name = "Apps"
+        Me.Apps.Size = New System.Drawing.Size(53, 39)
+        Me.Apps.TabIndex = 50
+        Me.Apps.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(695, 174)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(81, 39)
+        Me.Button16.TabIndex = 67
+        Me.Button16.Text = "Swipe to unlock (up)"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(924, 329)
+        Me.Controls.Add(Me.Button16)
+        Me.Controls.Add(Me.Button15)
         Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button12)
@@ -807,5 +829,7 @@ End Sub
     Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents Button14 As System.Windows.Forms.Button
+    Friend WithEvents Button15 As System.Windows.Forms.Button
+    Friend WithEvents Button16 As System.Windows.Forms.Button
 
 End Class

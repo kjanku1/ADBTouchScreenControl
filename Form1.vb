@@ -32,19 +32,65 @@ Public Class Form1
             Else
 
                 If ComboBox1.Text = "1080x1920" Then
-                    Shell("""Tools\adb.exe"" shell input swipe 722 1818 1340 1818")
+                    Shell("""Tools\adb.exe"" shell input swipe 722 1390 1340 1390")
                 Else
                     If ComboBox1.Text = "768x1280" Then
                         Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
                     Else
-                        If ComboBox1.Text = "720x1200" Then
-                            Shell("""Tools\adb.exe"" shell input swipe 360 850 660 850")
+                        If ComboBox1.Text = "720x1280" Then
+                            Shell("""Tools\adb.exe"" shell input swipe 359 907 660 907")
                         Else
-                            If ComboBox1.Text = "540x960" Then
-                                Shell("""Tools\adb.exe"" shell input swipe 270 680 509 676")
+                            If ComboBox1.Text = "720x1200" Then
+                                Shell("""Tools\adb.exe"" shell input swipe 360 850 660 850")
+                            Else
+                                If ComboBox1.Text = "540x960" Then
+                                    Shell("""Tools\adb.exe"" shell input swipe 270 680 509 676")
                                 Else
-                                If ComboBox1.Text = "480x800" Then
-                                    Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
+                                    If ComboBox1.Text = "480x800" Then
+                                        Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
+                                    Else
+                                        If ComboBox1.Text = "240x320" Then
+                                            Shell("""Tools\adb.exe"" shell input swipe 120 230 213 230")
+                                        End If
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+    Private Sub Button16_Click_1(sender As Object, e As EventArgs) Handles Button16.Click
+        If ComboBox1.Text = "Choose your screen resolution" Then
+            MsgBox("Choose you're devices resolution")
+        Else
+            If ComboBox1.Text = "1440x2560" Then
+                Shell("""Tools\adb.exe"" shell input swipe 720 1800 720 1280")
+            Else
+
+                If ComboBox1.Text = "1080x1920" Then
+                    Shell("""Tools\adb.exe"" shell input swipe 540 1390 540 960")
+                Else
+                    If ComboBox1.Text = "768x1280" Then
+                        Shell("""Tools\adb.exe"" shell input swipe 384 900 384 650")
+                    Else
+                        If ComboBox1.Text = "720x1280" Then
+                            Shell("""Tools\adb.exe"" shell input swipe 359 907 359 640")
+                        Else
+                            If ComboBox1.Text = "720x1200" Then
+                                Shell("""Tools\adb.exe"" shell input swipe 360 850 360 600")
+                            Else
+                                If ComboBox1.Text = "540x960" Then
+                                    Shell("""Tools\adb.exe"" shell input swipe 270 680 270 480")
+                                Else
+                                    If ComboBox1.Text = "480x800" Then
+                                        Shell("""Tools\adb.exe"" shell input swipe 240 570 240 400")
+                                    Else
+                                        If ComboBox1.Text = "240x320" Then
+                                            Shell("""Tools\adb.exe"" shell input swipe 120 230 120 160")
+                                        End If
+                                    End If
                                 End If
                             End If
                         End If
@@ -248,6 +294,9 @@ Public Class Form1
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Shell("""Tools\adb.exe"" shell su -c " & """rm /data/system/*.key""")
+        Shell("""Tools\adb.exe"" shell su -c " & """rm /data/system/*.db""")
+        Shell("""Tools\adb.exe"" shell su -c " & """rm /data/system/*.db-shm""")
+        Shell("""Tools\adb.exe"" shell su -c " & """rm /data/system/*.db-wal""")
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
@@ -260,5 +309,10 @@ Public Class Form1
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         Shell("""Tools\adb.exe"" shell su -c " & """poweroff""")
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Gestures.Show()
+        Me.Hide()
     End Sub
 End Class
