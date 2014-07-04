@@ -314,4 +314,15 @@ Public Class Form1
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
         Gestures.Show()
     End Sub
+
+    Private Sub AndroidControlByToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AndroidControlByToolStripMenuItem.Click
+        'ShellExecute ByVal 0&, "open", _
+        '"http://forum.xda-developers.com/showthread.php?t=2786395", _
+        'vbNullString, vbNullString, 
+        System.Diagnostics.Process.Start("http://forum.xda-developers.com/showthread.php?t=2786395")
+    End Sub
+
+    Private Sub Version010ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Version010ToolStripMenuItem.Click
+        System.Diagnostics.Process.Start("https://github.com/kjanku1/WindowsApplication1/commits/master")
+    End Sub
 End Class

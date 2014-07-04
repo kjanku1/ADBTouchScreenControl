@@ -89,6 +89,11 @@ Partial Class Form1
         Me.Home = New System.Windows.Forms.Button()
         Me.Apps = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AndroidControlByToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Version010ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -688,6 +693,34 @@ Partial Class Form1
         Me.Button16.Text = "Swipe to unlock (up)"
         Me.Button16.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(924, 24)
+        Me.MenuStrip1.TabIndex = 68
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AndroidControlByToolStripMenuItem, Me.Version010ToolStripMenuItem})
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.AboutToolStripMenuItem.Text = "About..."
+        '
+        'AndroidControlByToolStripMenuItem
+        '
+        Me.AndroidControlByToolStripMenuItem.Name = "AndroidControlByToolStripMenuItem"
+        Me.AndroidControlByToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.AndroidControlByToolStripMenuItem.Text = "Android Control by  kjanku1 "
+        '
+        'Version010ToolStripMenuItem
+        '
+        Me.Version010ToolStripMenuItem.Name = "Version010ToolStripMenuItem"
+        Me.Version010ToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.Version010ToolStripMenuItem.Text = "version: 0.10"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -759,8 +792,12 @@ Partial Class Form1
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Ultimate touchscreen control for android"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -831,5 +868,9 @@ End Sub
     Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents Button15 As System.Windows.Forms.Button
     Friend WithEvents Button16 As System.Windows.Forms.Button
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AndroidControlByToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Version010ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
