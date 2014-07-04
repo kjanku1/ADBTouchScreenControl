@@ -242,9 +242,12 @@ Partial Class Gestures
 
 
     Dim pos As Point
-    Dim dest As Point
+    Public dest As Point
+    Public coordinates_1 As Point
+    Public coordinates_2 As Point
     Dim resX As String
     Dim resY As String
+    Public complete_flag As Boolean
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Call MouseCheck()
         'MsgBox("tic")
@@ -328,4 +331,58 @@ Partial Class Gestures
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Shell("""Tools\adb.exe"" shell input keyevent KEYCODE_APP_SWITCH")
     End Sub
+
+    ' method to handle mouse clicks (start gesture detection)
+    Private Sub Panel1_MouseDown(sender As Object, e As EventArgs) Handles Panel1.MouseDown
+        'check if resolution selected
+        If Me.ComboBox1.Text = "" Then
+            MsgBox("Choose you're devices resolution")
+            complete_flag = 0
+        Else
+            'store mouse donwn coordinates
+            coordinates_1.X = dest.X
+            coordinates_1.Y = dest.Y
+            complete_flag = True
+            'MsgBox(complete_flag.ToString)
+        End If
+    End Sub
+    'method to handle remaining part of mesture detection
+    Private Sub Panel1_MouseUp(sender As Object, e As EventArgs) Handles Panel1.MouseUp
+        'run only when start/initial coordinates stored succcesfully
+        'MsgBox("test mouse up")
+        If complete_flag = True Then
+            'store mouse up coordinates
+            coordinates_2.X = dest.X
+            coordinates_2.Y = dest.Y
+            'detect tap or swipe
+            If coordinates_1.X = coordinates_2.X And coordinates_1.Y = coordinates_2.Y Then
+                'its a tap
+                'MsgBox("its a tap")
+                'MsgBox("""Tools\adb.exe"" shell input tap " & coordinates_1.X.ToString & " " & coordinates_1.Y.ToString)
+                Shell("""Tools\adb.exe"" shell input tap " & coordinates_1.X.ToString & " " & coordinates_1.Y.ToString)
+            Else
+                'its a swipe
+                'MsgBox("its a swipe")
+                'MsgBox("""Tools\adb.exe"" shell input swipe " & coordinates_1.X.ToString & " " & coordinates_1.Y.ToString & " " & coordinates_2.X.ToString & " " & coordinates_2.Y.ToString)
+                Shell("""Tools\adb.exe"" shell input swipe " & coordinates_1.X.ToString & " " & coordinates_1.Y.ToString & " " & coordinates_2.X.ToString & " " & coordinates_2.Y.ToString)
+
+            End If
+        Else
+            'MsgBox("condition not met")
+        End If
+    End Sub
+    'errorproofing
+    'method to handle situation when window is out of focus, clearing variables to avoid errors
+    Private Sub Panel1_MouseCaptureChanged(sender As Object, e As EventArgs) Handles Panel1.MouseCaptureChanged
+        'clear data and abort
+        complete_flag = 0
+
+        'clear mouse up coordinates
+        coordinates_1.X = 0
+        coordinates_1.Y = 0
+        coordinates_2.X = 0
+        coordinates_2.Y = 0
+
+    End Sub
+
 End Class
