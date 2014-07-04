@@ -99,6 +99,7 @@ Partial Class Gestures
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Location = New System.Drawing.Point(5, 33)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(296, 162)
@@ -192,7 +193,6 @@ Partial Class Gestures
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Gestures"
-        Me.Opacity = 0.6R
         Me.Text = "Gestures"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -216,6 +216,8 @@ Partial Class Gestures
         'MsgBox("Mouse moved 20 pixels!")
         Timer1.Interval = 10
         Timer1.Start()
+        Me.Panel1.BackColor = Color.Red
+        Me.TransparencyKey = Color.Red
     End Sub
 
     Private Shared Sub MouseCheck()
