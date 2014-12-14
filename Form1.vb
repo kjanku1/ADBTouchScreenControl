@@ -34,6 +34,9 @@ Public Class Form1
                 If ComboBox1.Text = "1080x1920" Then
                     Shell("""Tools\adb.exe"" shell input swipe 722 1390 1340 1390")
                 Else
+				If ComboBox1.Text = "800x1280" Then
+                        Shell("""Tools\adb.exe"" shell input swipe 400 900 740 900")
+                    Else
                     If ComboBox1.Text = "768x1280" Then
                         Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
                     Else
@@ -59,6 +62,7 @@ Public Class Form1
                     End If
                 End If
             End If
+            End If
         End If
     End Sub
     Private Sub Button16_Click_1(sender As Object, e As EventArgs) Handles Button16.Click
@@ -72,6 +76,9 @@ Public Class Form1
                 If ComboBox1.Text = "1080x1920" Then
                     Shell("""Tools\adb.exe"" shell input swipe 540 1390 540 960")
                 Else
+				If ComboBox1.Text = "800x1280" Then
+                        Shell("""Tools\adb.exe"" shell input swipe 400 900 400 650")
+                    Else
                     If ComboBox1.Text = "768x1280" Then
                         Shell("""Tools\adb.exe"" shell input swipe 384 900 384 650")
                     Else
@@ -98,6 +105,8 @@ Public Class Form1
                 End If
             End If
         End If
+		
+		End If
     End Sub
 
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown

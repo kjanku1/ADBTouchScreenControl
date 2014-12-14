@@ -117,7 +117,7 @@ Partial Class Gestures
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "768x1280", "720x1280", "720x1200", "480x800", "540x960", "240x320"})
+        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "800x1280", "768x1280", "720x1280", "720x1200", "480x800", "540x960", "240x320"})
         Me.ComboBox1.Location = New System.Drawing.Point(64, 6)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(79, 21)
@@ -283,6 +283,10 @@ Partial Class Gestures
                 resX = 1080
                 resY = 1920
             Else
+			If ComboBox1.Text = "800x1280" Then
+                    resX = 800
+                    resY = 1280
+                Else
                 If ComboBox1.Text = "768x1280" Then
                     resX = 768
                     resY = 1280
@@ -314,6 +318,7 @@ Partial Class Gestures
                 End If
             End If
         End If
+		End If
     End Sub
 
     Friend WithEvents Button1 As System.Windows.Forms.Button
