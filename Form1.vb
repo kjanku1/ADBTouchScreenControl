@@ -51,9 +51,14 @@ Public Class Form1
                                 Else
                                     If ComboBox1.Text = "480x800" Then
                                         Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
-                                    Else
-                                        If ComboBox1.Text = "240x320" Then
-                                            Shell("""Tools\adb.exe"" shell input swipe 120 230 213 230")
+                                        Else
+                                            If ComboBox1.Text = "400x800" Then
+                                                Shell("""Tools\adb.exe"" shell input swipe 200 570 560 570")
+                                            Else
+                                                If ComboBox1.Text = "240x320" Then
+                                                    Shell("""Tools\adb.exe"" shell input swipe 120 230 213 230")
+                                                End If
+                                            End If
                                         End If
                                     End If
                                 End If
@@ -61,7 +66,6 @@ Public Class Form1
                         End If
                     End If
                 End If
-            End If
             End If
         End If
     End Sub
@@ -93,9 +97,14 @@ Public Class Form1
                                 Else
                                     If ComboBox1.Text = "480x800" Then
                                         Shell("""Tools\adb.exe"" shell input swipe 240 570 240 400")
-                                    Else
-                                        If ComboBox1.Text = "240x320" Then
-                                            Shell("""Tools\adb.exe"" shell input swipe 120 230 120 160")
+                                        Else
+                                            If ComboBox1.Text = "400x800" Then
+                                                Shell("""Tools\adb.exe"" shell input swipe 200 570 200 400")
+                                            Else
+                                                If ComboBox1.Text = "240x320" Then
+                                                    Shell("""Tools\adb.exe"" shell input swipe 120 230 120 160")
+                                                End If
+                                            End If
                                         End If
                                     End If
                                 End If
@@ -105,8 +114,6 @@ Public Class Form1
                 End If
             End If
         End If
-		
-		End If
     End Sub
 
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown

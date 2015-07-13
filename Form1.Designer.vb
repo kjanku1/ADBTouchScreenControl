@@ -605,7 +605,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "800x1280", "768x1280", "720x1280", "720x1200", "480x800", "540x960", "240x320"})
+        Me.ComboBox1.Items.AddRange(New Object() {"1440x2560", "1080x1920", "800x1280", "768x1280", "720x1280", "720x1200", "480x800", "400x800", "540x960", "240x320"})
         Me.ComboBox1.Location = New System.Drawing.Point(697, 147)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
