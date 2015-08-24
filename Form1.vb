@@ -24,96 +24,56 @@ Public Class Form1
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        If ComboBox1.Text = "Choose your screen resolution" Then
-            MsgBox("Choose you're devices resolution")
-        Else
-            If ComboBox1.Text = "1440x2560" Then
+        Select Case ComboBox1.Text
+            Case "1440x2560"
                 Shell("""Tools\adb.exe"" shell input swipe 562 1800 1440 1800")
-            Else
-
-                If ComboBox1.Text = "1080x1920" Then
-                    Shell("""Tools\adb.exe"" shell input swipe 722 1390 1340 1390")
-                Else
-				If ComboBox1.Text = "800x1280" Then
-                        Shell("""Tools\adb.exe"" shell input swipe 400 900 740 900")
-                    Else
-                    If ComboBox1.Text = "768x1280" Then
-                        Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
-                    Else
-                        If ComboBox1.Text = "720x1280" Then
-                            Shell("""Tools\adb.exe"" shell input swipe 359 907 660 907")
-                        Else
-                            If ComboBox1.Text = "720x1200" Then
-                                Shell("""Tools\adb.exe"" shell input swipe 360 850 660 850")
-                            Else
-                                If ComboBox1.Text = "540x960" Then
-                                    Shell("""Tools\adb.exe"" shell input swipe 270 680 509 676")
-                                Else
-                                    If ComboBox1.Text = "480x800" Then
-                                        Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
-                                        Else
-                                            If ComboBox1.Text = "400x800" Then
-                                                Shell("""Tools\adb.exe"" shell input swipe 200 570 560 570")
-                                            Else
-                                                If ComboBox1.Text = "240x320" Then
-                                                    Shell("""Tools\adb.exe"" shell input swipe 120 230 213 230")
-                                                End If
-                                            End If
-                                        End If
-                                    End If
-                                End If
-                            End If
-                        End If
-                    End If
-                End If
-            End If
-        End If
+            Case "1080x1920"
+                Shell("""Tools\adb.exe"" shell input swipe 722 1390 1340 1390")
+            Case "800x1280"
+                Shell("""Tools\adb.exe"" shell input swipe 400 900 740 900")
+            Case "768x1280"
+                Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
+            Case "720x1280"
+                Shell("""Tools\adb.exe"" shell input swipe 359 907 660 907")
+            Case "720x1200"
+                Shell("""Tools\adb.exe"" shell input swipe 360 850 660 850")
+            Case "540x960"
+                Shell("""Tools\adb.exe"" shell input swipe 270 680 509 676")
+            Case "480x800"
+                Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
+            Case "400x800"
+                Shell("""Tools\adb.exe"" shell input swipe 200 570 560 570")
+            Case "240x320"
+                Shell("""Tools\adb.exe"" shell input swipe 120 230 213 230")
+            Case Else
+                MsgBox("Choose you're devices resolution")
+        End Select
     End Sub
     Private Sub Button16_Click_1(sender As Object, e As EventArgs) Handles Button16.Click
-        If ComboBox1.Text = "Choose your screen resolution" Then
-            MsgBox("Choose you're devices resolution")
-        Else
-            If ComboBox1.Text = "1440x2560" Then
-                Shell("""Tools\adb.exe"" shell input swipe 720 1800 720 1280")
-            Else
-
-                If ComboBox1.Text = "1080x1920" Then
-                    Shell("""Tools\adb.exe"" shell input swipe 540 1390 540 960")
-                Else
-				If ComboBox1.Text = "800x1280" Then
-                        Shell("""Tools\adb.exe"" shell input swipe 400 900 400 650")
-                    Else
-                    If ComboBox1.Text = "768x1280" Then
-                        Shell("""Tools\adb.exe"" shell input swipe 384 900 384 650")
-                    Else
-                        If ComboBox1.Text = "720x1280" Then
-                            Shell("""Tools\adb.exe"" shell input swipe 359 907 359 640")
-                        Else
-                            If ComboBox1.Text = "720x1200" Then
-                                Shell("""Tools\adb.exe"" shell input swipe 360 850 360 600")
-                            Else
-                                If ComboBox1.Text = "540x960" Then
-                                    Shell("""Tools\adb.exe"" shell input swipe 270 680 270 480")
-                                Else
-                                    If ComboBox1.Text = "480x800" Then
-                                        Shell("""Tools\adb.exe"" shell input swipe 240 570 240 400")
-                                        Else
-                                            If ComboBox1.Text = "400x800" Then
-                                                Shell("""Tools\adb.exe"" shell input swipe 200 570 200 400")
-                                            Else
-                                                If ComboBox1.Text = "240x320" Then
-                                                    Shell("""Tools\adb.exe"" shell input swipe 120 230 120 160")
-                                                End If
-                                            End If
-                                        End If
-                                    End If
-                                End If
-                            End If
-                        End If
-                    End If
-                End If
-            End If
-        End If
+        Select Case ComboBox1.Text
+            Case "1440x2560"
+                Shell("""Tools\adb.exe"" shell input swipe 562 1800 1440 1800")
+            Case "1080x1920"
+                Shell("""Tools\adb.exe"" shell input swipe 722 1390 1340 1390")
+            Case "800x1280"
+                Shell("""Tools\adb.exe"" shell input swipe 400 900 740 900")
+            Case "768x1280"
+                Shell("""Tools\adb.exe"" shell input swipe 300 900 720 900")
+            Case "720x1280"
+                Shell("""Tools\adb.exe"" shell input swipe 359 907 660 907")
+            Case "720x1200"
+                Shell("""Tools\adb.exe"" shell input swipe 360 850 660 850")
+            Case "540x960"
+                Shell("""Tools\adb.exe"" shell input swipe 270 680 509 676")
+            Case "480x800"
+                Shell("""Tools\adb.exe"" shell input swipe 240 570 560 570")
+            Case "400x800"
+                Shell("""Tools\adb.exe"" shell input swipe 200 570 560 570")
+            Case "240x320"
+                Shell("""Tools\adb.exe"" shell input swipe 120 230 213 230")
+            Case Else
+                MsgBox("Choose you're devices resolution")
+        End Select
     End Sub
 
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
