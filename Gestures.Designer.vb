@@ -276,14 +276,14 @@ Partial Class Gestures
     'zmiana rozdzielczosci w combobox
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
     	Select Case ComboBox1.Text
-        	Case "1440x2560"
+            Case "1440x2560"
                 resX = 1440
-            	resY = 2560
+                resY = 2560
             Case "1080x1920"
                 resX = 1080
                 resY = 1920
             Case "800x1280"
-            	resX = 800
+                resX = 800
                 resY = 1280
             Case "768x1280"
                 resX = 768
@@ -292,7 +292,7 @@ Partial Class Gestures
                 resX = 720
                 resY = 1280
             Case "720x1200"
-            	resX = 720
+                resX = 720
                 resY = 1200
             Case "540x960"
                 resX = 540
