@@ -275,55 +275,38 @@ Partial Class Gestures
     End Sub
     'zmiana rozdzielczosci w combobox
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        If ComboBox1.Text = "1440x2560" Then
-            resX = 1440
-            resY = 2560
-        Else
-            If ComboBox1.Text = "1080x1920" Then
+    	Select Case ComboBox1.Text
+        	Case "1440x2560"
+                resX = 1440
+            	resY = 2560
+            Case "1080x1920"
                 resX = 1080
                 resY = 1920
-            Else
-			If ComboBox1.Text = "800x1280" Then
-                    resX = 800
-                    resY = 1280
-                Else
-                If ComboBox1.Text = "768x1280" Then
-                    resX = 768
-                    resY = 1280
-                Else
-                    If ComboBox1.Text = "720x1280" Then
-                        resX = 720
-                        resY = 1280
-                    Else
-                        If ComboBox1.Text = "720x1200" Then
-                            resX = 720
-                            resY = 1200
-                        Else
-                            If ComboBox1.Text = "540x960" Then
-                                resX = 540
-                                resY = 960
-                            Else
-                                If ComboBox1.Text = "480x800" Then
-                                    resX = 480
-                                    resY = 800
-                                    Else
-                                        If ComboBox1.Text = "400x800" Then
-                                            resX = 400
-                                            resY = 800
-                                        Else
-                                            If ComboBox1.Text = "240x320" Then
-                                                resX = 240
-                                                resY = 320
-                                            End If
-                                        End If
-                                    End If
-                                End If
-                            End If
-                        End If
-                    End If
-                End If
-            End If
-        End If
+            Case "800x1280"
+            	resX = 800
+                resY = 1280
+            Case "768x1280"
+                resX = 768
+                resY = 1280
+            Case "720x1280"
+                resX = 720
+                resY = 1280
+            Case "720x1200"
+            	resX = 720
+                resY = 1200
+            Case "540x960"
+                resX = 540
+                resY = 960
+            Case "480x800"
+                resX = 480
+                resY = 800
+            Case "400x800"
+                resX = 400
+                resY = 800
+            Case "240x320"
+                resX = 240
+                resY = 320
+        End Select
     End Sub
 
     Friend WithEvents Button1 As System.Windows.Forms.Button
